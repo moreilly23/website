@@ -5,3 +5,9 @@ title: "Portfolio"
 ```{r}
 
 Welcome to my portfolio! Here is a look at some recent work. 
+
+## Fourstoried
+
+Here is a link to a major reporting assignment I did this past summer: https://fourstoried.com/
+  
+"FourStoried was a joint media venture between GWU and WVU that focused on community reporting. I covered two discint communities, the West Side neighborhood in Charleston, WV, and the LGBTQ in Dupont Circle/ADMO"."The central focus in this project was to prioritize the subjects and allow them to voice concerns regarding issues they felt their respective communities were facing."
