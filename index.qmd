@@ -1,0 +1,32 @@
+---
+title: "webby"
+
+about:
+  template: jolla
+  image: SHEISTY.png
+  links:
+    - icon: twitter
+      text: twitter
+      href: https://twitter.com
+    - icon: github
+      text: Github
+      href: https://github.com
+---
+
+
+## EDUCATION
+
+GEORGE WASHINGTON UIVERSITY
+
+## SKILLS
+
+Writing
+Reporting
+Data Analysis 
+
+
+
+
+```{r}
+
+

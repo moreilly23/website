@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "webby",
+    "section": "",
+    "text": "GEORGE WASHINGTON UIVERSITY"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "webby",
+    "section": "EDUCATION",
+    "text": "EDUCATION\nGEORGE WASHINGTON UIVERSITY"
+  },
+  {
+    "objectID": "index.html#skills",
+    "href": "index.html#skills",
+    "title": "webby",
+    "section": "SKILLS",
+    "text": "SKILLS\nWriting Reporting Data Analysis"
+  },
+  {
+    "objectID": "portfolio.html",
+    "href": "portfolio.html",
+    "title": "Portfolio",
+    "section": "",
+    "text": "Welcome to my portfolio! Here is a look at some recent work."
+  }
+]
