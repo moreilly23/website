@@ -1,5 +1,5 @@
 ---
-title: "webby"
+title: "Website"
 
 about:
   template: jolla
@@ -22,8 +22,6 @@ GEORGE WASHINGTON UIVERSITY
 
 Writing
 Reporting
-Data Analysis 
-
 
 
 
