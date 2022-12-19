@@ -2,15 +2,57 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "webby",
+    "title": "Website",
     "section": "",
     "text": "GEORGE WASHINGTON UIVERSITY"
   },
   {
     "objectID": "index.html#skills",
     "href": "index.html#skills",
-    "title": "webby",
+    "title": "Website",
     "section": "SKILLS",
-    "text": "SKILLS\nWriting Reporting Data Analysis"
+    "text": "SKILLS\nWriting Reporting"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "portfolio.html",
+    "href": "portfolio.html",
+    "title": "Portfolio",
+    "section": "",
+    "text": "Welcome to my portfolio! Here is a look at some recent work."
+  },
+  {
+    "objectID": "portfolio.html#four-storied",
+    "href": "portfolio.html#four-storied",
+    "title": "Portfolio",
+    "section": "Four storied",
+    "text": "Four storied\nHere is a link to a major reporting assignment I did this past summer: https://fourstoried.com/\nFourStoried was a joint media venture between GWU and WVU that focused on community reporting. I covered two discint communities, the West Side neighborhood in Charleston, WV, and the LGBTQ in Dupont Circle/ADMO. The central focus in this project was to prioritize the subjects and allow them to voice concerns regarding issues they felt their respective communities were facing."
+  },
+  {
+    "objectID": "portfolio.html#visual",
+    "href": "portfolio.html#visual",
+    "title": "Portfolio",
+    "section": "Visual",
+    "text": "Visual\nBelow is a link to visual work that I have worked on, which includes video, audio, and visual graphics.\nhttps://milesoreilly.weebly.com/"
+  },
+  {
+    "objectID": "walkie.html",
+    "href": "walkie.html",
+    "title": "About",
+    "section": "",
+    "text": "1 + 1\n\n[1] 2"
+  },
+  {
+    "objectID": "VA Analysis.html",
+    "href": "VA Analysis.html",
+    "title": "VA Analysis",
+    "section": "",
+    "text": "Comparing Virgnia Gov vs. Prez\n\njoined_vacomparison <- read.csv(\"joined_vacomparison.csv\")\nDT::datatable(joined_vacomparison)\n\n\n\n\n\n#I will calculate the margin in terms of percentage that Youngkin had within Trump voters. Positive values correlate to a higher success than Trump while negative \nRmargin= mutate(joined_vacomparison, YoungkinMarg= pct_youngkin-trump_pct)\nDT::datatable(Rmargin)\n\n\n\n\n\n#DATA TABLE OF TOP 5 YOUNGKIN COUNTIES DIFF\nTop5 <- arrange(Rmargin, desc(YoungkinMarg))\nTop5county <- head(Top5,5)\nDT::datatable(Top5county)\n\n\n\n\n\n#PLOT THEM\n\n\nggplot(Top5county, aes(x=reorder(locality, YoungkinMarg), y=YoungkinMarg)) +\n  geom_bar(stat = \"identity\", color = \"black\", fill = \"blue\") +\n  coord_flip() \n\n\n\n# TOP 5 YOUNGKIN SUPPORT\nYoungkinSenate <- arrange(joined_vacomparison, desc(pct_youngkin))\nYoungkin5 <- head(YoungkinSenate, 5)\nDT::datatable(Youngkin5)\n\n\n\n\n\n#PLOT\nggplot(Youngkin5, aes(x=reorder(locality, pct_youngkin), y=pct_youngkin)) +\n  geom_bar(stat = \"identity\", color = \"black\", fill = \"blue\") +\n  coord_flip() \n\n\n\n#MCAULIFFE\nMcCauliffe <- arrange(joined_vacomparison, desc(pct_mcauliffe))\nMC5 <- head(McCauliffe, 5)\nDT::datatable(MC5)\n\n\n\n\n\n#finding 1 - DT of highest biden margin\n\nPresElec= mutate(joined_vacomparison, BidenMarg = biden_pct-trump_pct)\nBiden5 <- arrange(PresElec, desc(BidenMarg))\nBiden5county <- head(Biden5, 5)\nDT::datatable(Biden5county)\n\n\n\n\n\n#finding 2 - chart of most trump voters\ntrumpnumbers <- arrange(joined_vacomparison, desc(trump))\ntrump5 <- head(trumpnumbers, 5)\nggplot(trump5, aes(x=reorder(locality, trump), y=trump)) +\n  geom_bar(stat = \"identity\", color = \"white\", fill = \"red\")\n\n\n\n#finding 3 - split within democrat camp\n\nDmargin=mutate(joined_vacomparison, MCmarg= pct_mcauliffe-biden_pct)\nDmargincounty <-arrange(Dmargin, desc(MCmarg))\nDmargin5 <- head(Dmargincounty, 5)\n\n#plot\nggplot(Dmargin5, aes(x=reorder(locality, MCmarg), y=MCmarg)) +\n  geom_bar(stat = \"identity\", color = \"black\", fill = \"blue\") +\n  coord_flip()"
   }
 ]

@@ -3,13 +3,23 @@ project:
   output-dir: docs
 
 website:
-  title: "webby"
+  page-footer:
+    left: ""
+    right:
+      - icon: github
+        href: https://github.com/moreilly23
+
+  title: "Miles' Website"
   navbar:
     left:
-      - href: index.qmd
-        text: Home
-      - about.qmd
+      - text: "Home"
+      - file: index.qmd
       - portfolio.qmd
+      - VA Analysis.qmd
+      - walkie.qmd
+      - text: "Resume"
+      - href: https://drive.google.com/file/d/1zAVPlym0UHgr4pgYzyK2647T5wwYe7Bf/view?usp=sharing
+
 
 format:
   html:
