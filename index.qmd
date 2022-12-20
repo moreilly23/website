@@ -13,16 +13,17 @@ about:
       href: https://github.com
 ---
 
+Hello! Welcome to my Website!
+
 
 ## EDUCATION
 
-GEORGE WASHINGTON UNIVERSITY
+GEORGE WASHINGTON UNIVERSITY - BA in Journalism and Mass Communications
 
 ## SKILLS
 
 Writing
 Reporting
-
 
 
 

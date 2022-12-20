@@ -9,7 +9,7 @@ website:
       - icon: github
         href: https://github.com/moreilly23
 
-  title: "Miles' Website"
+  title: "Miles O'Reilly"
   navbar:
     left:
       - text: "Home"
@@ -17,15 +17,20 @@ website:
       - portfolio.qmd
       - VA Analysis.qmd
       - walkie.qmd
-      - text: "Resume"
+      - text: Resume
       - href: https://drive.google.com/file/d/1zAVPlym0UHgr4pgYzyK2647T5wwYe7Bf/view?usp=sharing
-
+    right:
+      - icon: linkedin
+        href: www.linkedin.com/in/milesoreilly
 
 format:
   html:
     theme: cosmo
     css: styles.css
     toc: true
+
+
+editor: visual
 
 
 
