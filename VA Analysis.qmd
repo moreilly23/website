@@ -3,15 +3,7 @@ title: "VA Analysis"
 editor: visual
 ---
 
-title: "Virginia Election Project"
-author: "Miles O'Reilly"
-execute:
-  echo: true
-format:
-  html:
-    self-contained: true
-    code-tools: true
----
+title: "Virginia Election Project" author: "Miles O'Reilly" execute: echo: true format: html: self-contained: true code-tools: true ---
 
 ```{r setup, include=FALSE, warning=FALSE, message=FALSE}
 
@@ -30,67 +22,73 @@ options(stringsAsFactors = FALSE)
 
 ```
 
-
 # Comparing Virgnia Gov vs. Prez
-
 
 ```{r}
 
-joined_vacomparison <- read.csv("joined_vacomparison.csv")
-DT::datatable(joined_vacomparison)
+joined_vacomparison <- read.csv("joined_vacomparison.csv") 
 
+DT::datatable(joined_vacomparison)
+```
+
+```{r}
 #I will calculate the margin in terms of percentage that Youngkin had within Trump voters. Positive values correlate to a higher success than Trump while negative 
-Rmargin= mutate(joined_vacomparison, YoungkinMarg= pct_youngkin-trump_pct)
+
+Rmargin= mutate(joined_vacomparison, YoungkinMarg= pct_youngkin-trump_pct) 
 DT::datatable(Rmargin)
 
-#DATA TABLE OF TOP 5 YOUNGKIN COUNTIES DIFF
-Top5 <- arrange(Rmargin, desc(YoungkinMarg))
-Top5county <- head(Top5,5)
+Top5 <- arrange(Rmargin, desc(YoungkinMarg)) 
+Top5county <- head(Top5,5) 
 DT::datatable(Top5county)
 
-#PLOT THEM
+ggplot(Top5county, aes(x=reorder(locality, YoungkinMarg), y=YoungkinMarg)) + geom_bar(stat = "identity", color = "black", fill = "blue") + coord_flip()
 
+```
 
-ggplot(Top5county, aes(x=reorder(locality, YoungkinMarg), y=YoungkinMarg)) +
-  geom_bar(stat = "identity", color = "black", fill = "blue") +
-  coord_flip() 
-
+```{r}
 # TOP 5 YOUNGKIN SUPPORT
-YoungkinSenate <- arrange(joined_vacomparison, desc(pct_youngkin))
-Youngkin5 <- head(YoungkinSenate, 5)
+
+YoungkinSenate <- arrange(joined_vacomparison, desc(pct_youngkin)) 
+Youngkin5 <- head(YoungkinSenate, 5) 
 DT::datatable(Youngkin5)
 
-#PLOT
-ggplot(Youngkin5, aes(x=reorder(locality, pct_youngkin), y=pct_youngkin)) +
-  geom_bar(stat = "identity", color = "black", fill = "blue") +
-  coord_flip() 
+ggplot(Youngkin5, aes(x=reorder(locality, pct_youngkin), y=pct_youngkin)) + geom_bar(stat = "identity", color = "black", fill = "blue") + coord_flip()
+```
 
-#MCAULIFFE
+```{r}
 McCauliffe <- arrange(joined_vacomparison, desc(pct_mcauliffe))
-MC5 <- head(McCauliffe, 5)
+MC5 <- head(McCauliffe, 5) 
 DT::datatable(MC5)
-  
+```
+
+```{r}
 #finding 1 - DT of highest biden margin
 
-PresElec= mutate(joined_vacomparison, BidenMarg = biden_pct-trump_pct)
-Biden5 <- arrange(PresElec, desc(BidenMarg))
-Biden5county <- head(Biden5, 5)
+PresElec= mutate(joined_vacomparison, BidenMarg = biden_pct-trump_pct) 
+Biden5 <- arrange(PresElec, desc(BidenMarg)) 
+Biden5county <- head(Biden5, 5) 
 DT::datatable(Biden5county)
 
-#finding 2 - chart of most trump voters
+```
+
+```{r}
+#finding 2 - chart of most trump voters 
+
 trumpnumbers <- arrange(joined_vacomparison, desc(trump))
-trump5 <- head(trumpnumbers, 5)
-ggplot(trump5, aes(x=reorder(locality, trump), y=trump)) +
-  geom_bar(stat = "identity", color = "white", fill = "red")
+trump5 <- head(trumpnumbers, 5) 
+ggplot(trump5, aes(x=reorder(locality, trump), y=trump)) + geom_bar(stat = "identity", color = "white", fill = "red")
+
+```
+
+```{r}
 
 #finding 3 - split within democrat camp
 
-Dmargin=mutate(joined_vacomparison, MCmarg= pct_mcauliffe-biden_pct)
-Dmargincounty <-arrange(Dmargin, desc(MCmarg))
+Dmargin= mutate(joined_vacomparison, MCmarg= pct_mcauliffe-biden_pct) 
+Dmargincounty <-arrange(Dmargin, desc(MCmarg)) 
 Dmargin5 <- head(Dmargincounty, 5)
+DT::datatable(Dmargin5)
 
-#plot
-ggplot(Dmargin5, aes(x=reorder(locality, MCmarg), y=MCmarg)) +
-  geom_bar(stat = "identity", color = "black", fill = "blue") +
+ggplot(Dmargin5, aes(x=reorder(locality, MCmarg), y=MCmarg)) + geom_bar(stat = "identity", color = "black", fill = "blue") + 
   coord_flip() 
 ---
