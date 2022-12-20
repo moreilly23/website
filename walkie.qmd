@@ -2,8 +2,9 @@
 title: "Walkthrough"
 editor: visual
 ---
-Housing Sale Analysis
----
+
+## Housing Sale Analysis
+
 ```{r}
 #As always, we start off by librarying the packages we will use in our code. For this data set we will use tidyverse and lubridate. 
 library(tidyverse)
@@ -26,7 +27,6 @@ filter(housesales, year == 2015)
 housesales %>%
   filter(between(year,2010,2015))
 ```
-
 
 ```{r}
 # We can also filter categorical variables, in this case, the names of cities. We use the same code as we did with years, but substitute the city name in the place of the year.
@@ -70,4 +70,4 @@ arrange(DJ, desc(sales))
 
 ```
 
----
+------------------------------------------------------------------------
