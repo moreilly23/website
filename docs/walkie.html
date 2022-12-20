@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>webby - About</title>
+<title>Miles’ Website - Walkthrough</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -128,20 +128,32 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <a class="navbar-brand" href="./index.html">
-    <span class="navbar-title">webby</span>
+    <span class="navbar-title">Miles’ Website</span>
   </a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
-  <li class="nav-item">
-    <a class="nav-link" href="./index.html">Home</a>
-  </li>  
   <li class="dropdown-header">
- about.qmd</li>
+ Home</li>
+  <li class="nav-item">
+    <a class="nav-link" href="./index.html">Website</a>
+  </li>  
   <li class="nav-item">
     <a class="nav-link" href="./portfolio.html">Portfolio</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="./VA Analysis.html">VA Analysis</a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link active" href="./walkie.html" aria-current="page">Walkthrough</a>
+  </li>  
+  <li class="dropdown-header">
+ Resume</li>
+  <li class="nav-item compact">
+    <a class="nav-link" href="https://drive.google.com/file/d/1zAVPlym0UHgr4pgYzyK2647T5wwYe7Bf/view?usp=sharing">
+ </a>
   </li>  
 </ul>
               <div id="quarto-search" class="" title="Search"></div>
@@ -154,14 +166,22 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#now-do-the-same-as-question-8-but-this-time-instead-of-dallas-show-results-for-corpus-christi" id="toc-now-do-the-same-as-question-8-but-this-time-instead-of-dallas-show-results-for-corpus-christi" class="nav-link active" data-scroll-target="#now-do-the-same-as-question-8-but-this-time-instead-of-dallas-show-results-for-corpus-christi">9) Now do the same as Question 8, but this time instead of Dallas, show results for Corpus Christi</a></li>
+  <li><a href="#finally-using-the-corpus-christi-code-from-question-9-instead-of-june" id="toc-finally-using-the-corpus-christi-code-from-question-9-instead-of-june" class="nav-link" data-scroll-target="#finally-using-the-corpus-christi-code-from-question-9-instead-of-june">10) Finally, using the Corpus Christi code from Question 9, instead of June</a></li>
+  <li><a href="#use-the-month-of-february-2-instead." id="toc-use-the-month-of-february-2-instead." class="nav-link" data-scroll-target="#use-the-month-of-february-2-instead.">use the month of February (2) instead.</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">Walkthrough</h1>
 </div>
 
 
@@ -175,15 +195,269 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 </header>
 
-<p>About this site</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="dv">1</span> <span class="sc">+</span> <span class="dv">1</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#first we'll load our libraries</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="co">#make sure to install the tidyverse if it's not already installed</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>── Attaching packages ─────────────────────────────────────── tidyverse 1.3.2 ──
+✔ ggplot2 3.3.6      ✔ purrr   0.3.4 
+✔ tibble  3.1.8      ✔ dplyr   1.0.10
+✔ tidyr   1.2.1      ✔ stringr 1.4.1 
+✔ readr   2.1.2      ✔ forcats 0.5.2 
+── Conflicts ────────────────────────────────────────── tidyverse_conflicts() ──
+✖ dplyr::filter() masks stats::filter()
+✖ dplyr::lag()    masks stats::lag()</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(lubridate)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>
+Attaching package: 'lubridate'
+
+The following objects are masked from 'package:base':
+
+    date, intersect, setdiff, union</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># run this line below load the data for this assignment</span></span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="co"># we'll use a built-in dataset from the ggplot2 package (loaded as party of the tidyverse)</span></span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>housesales <span class="ot">&lt;-</span> ggplot2<span class="sc">::</span>txhousing</span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a><span class="co"># This dataset includes monthly housing sales by city in the state of texas from 2000-2015.</span></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># let's take a look at it</span></span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>housesales</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 2</code></pre>
+<pre><code># A tibble: 8,602 × 9
+   city     year month sales   volume median listings inventory  date
+   &lt;chr&gt;   &lt;int&gt; &lt;int&gt; &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+ 1 Abilene  2000     1    72  5380000  71400      701       6.3 2000 
+ 2 Abilene  2000     2    98  6505000  58700      746       6.6 2000.
+ 3 Abilene  2000     3   130  9285000  58100      784       6.8 2000.
+ 4 Abilene  2000     4    98  9730000  68600      785       6.9 2000.
+ 5 Abilene  2000     5   141 10590000  67300      794       6.8 2000.
+ 6 Abilene  2000     6   156 13910000  66900      780       6.6 2000.
+ 7 Abilene  2000     7   152 12635000  73500      742       6.2 2000.
+ 8 Abilene  2000     8   131 10710000  75000      765       6.4 2001.
+ 9 Abilene  2000     9   104  7615000  64500      771       6.5 2001.
+10 Abilene  2000    10   101  7040000  59300      764       6.6 2001.
+# … with 8,592 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># You can also see it in the view window by running this line</span></span>
+<span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a><span class="fu">View</span>(housesales)</span>
+<span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-4"><a href="#cb7-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb7-5"><a href="#cb7-5" aria-hidden="true" tabindex="-1"></a><span class="co"># FOR EACH OF THE QUESTIONS BELOW, WRITE YOUR WORKING R CODE TO RETURN THE REQUESTED RESULTS</span></span>
+<span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># USE COMMENTS (PREFACED BY THE #) TO ACCOMPANY YOUR CODE TO EXPLAIN WHAT YOU'RE DOING </span></span>
+<span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a><span class="co"># FOR EACH STEP AS NEEDED</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 1) The column "year" indicates the year. Filter to return only results from 2015. </span></span>
+<span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a><span class="co"># (note that because the column is numeric, you wouldn't use quotes as with text when setting your filter value)</span></span>
+<span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(housesales, year <span class="sc">==</span> <span class="dv">2015</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 322 × 9
+   city      year month sales   volume median listings inventory  date
+   &lt;chr&gt;    &lt;int&gt; &lt;int&gt; &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+ 1 Abilene   2015     1   158 23486998 134100      801       4.4 2015 
+ 2 Abilene   2015     2   151 19834263 126500      767       4.1 2015.
+ 3 Abilene   2015     3   198 31869437 136800      821       4.4 2015.
+ 4 Abilene   2015     4   201 28301159 129600      891       4.7 2015.
+ 5 Abilene   2015     5   199 31385757 144700      919       4.8 2015.
+ 6 Abilene   2015     6   260 41396230 141500      965       5   2015.
+ 7 Abilene   2015     7   268 45845730 148700      986       5   2016.
+ 8 Amarillo  2015     1   204 33188726 138500     1120       4.3 2015 
+ 9 Amarillo  2015     2   188 34355428 149400     1084       4.2 2015.
+10 Amarillo  2015     3   317 53603130 140900     1051       3.9 2015.
+# … with 312 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 2) Similar to the above question, filter results from 2010 onward, so 2010-2015.</span></span>
+<span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a>housesales <span class="sc">%&gt;%</span></span>
+<span id="cb10-4"><a href="#cb10-4" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(<span class="fu">between</span>(year,<span class="dv">2010</span>,<span class="dv">2015</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 3,082 × 9
+   city     year month sales   volume median listings inventory  date
+   &lt;chr&gt;   &lt;int&gt; &lt;int&gt; &lt;dbl&gt;    &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+ 1 Abilene  2010     1    73  9130783 112200      868       6.4 2010 
+ 2 Abilene  2010     2    93 10372904  98300      830       6.1 2010.
+ 3 Abilene  2010     3   133 16517713 114000      854       6.3 2010.
+ 4 Abilene  2010     4   161 18788002 103600      859       6.3 2010.
+ 5 Abilene  2010     5   200 22804393  99300      914       6.5 2010.
+ 6 Abilene  2010     6   169 23216943 127900      932       6.7 2010.
+ 7 Abilene  2010     7   159 22363123 127300      915       6.6 2010.
+ 8 Abilene  2010     8   144 17504580 122000      936       6.7 2011.
+ 9 Abilene  2010     9   116 15475763 121300      899       6.5 2011.
+10 Abilene  2010    10   111 14570529 111900      863       6.4 2011.
+# … with 3,072 more rows</code></pre>
 </div>
 </div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 3) The "city" column contains the relevant city. Filter to return only results for Houston</span></span>
+<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a><span class="co"># (note, remember R is case sensitive)</span></span>
+<span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb12-4"><a href="#cb12-4" aria-hidden="true" tabindex="-1"></a>housesales <span class="sc">%&gt;%</span></span>
+<span id="cb12-5"><a href="#cb12-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(city <span class="sc">==</span> <span class="st">"Houston"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 187 × 9
+   city     year month sales    volume median listings inventory  date
+   &lt;chr&gt;   &lt;int&gt; &lt;int&gt; &lt;dbl&gt;     &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+ 1 Houston  2000     1  2653 381805283 102500    16768       3.9 2000 
+ 2 Houston  2000     2  3687 536456803 110300    16933       3.9 2000.
+ 3 Houston  2000     3  4733 709112659 109500    17058       3.9 2000.
+ 4 Houston  2000     4  4364 649712779 110800    17716       4.1 2000.
+ 5 Houston  2000     5  5215 809459231 112700    18461       4.2 2000.
+ 6 Houston  2000     6  5655 887396592 117900    18959       4.3 2000.
+ 7 Houston  2000     7  5009 770284031 118300    19391       4.4 2000.
+ 8 Houston  2000     8  5134 800032008 114600    19534       4.5 2001.
+ 9 Houston  2000     9  4262 671716256 115900    19558       4.5 2001.
+10 Houston  2000    10  4068 621419904 112400    19752       4.5 2001.
+# … with 177 more rows</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 4) Filter for only where the city is Houston as above, and now also filter for only </span></span>
+<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="co"># the year 2010. The results should give you 12 records, one for each month in 2010 for Houston.</span></span>
+<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a>housesales <span class="sc">%&gt;%</span></span>
+<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(city <span class="sc">==</span> <span class="st">"Houston"</span>, year <span class="sc">==</span> <span class="dv">2010</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 9
+   city     year month sales     volume median listings inventory  date
+   &lt;chr&gt;   &lt;int&gt; &lt;int&gt; &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+ 1 Houston  2010     1  2856  544338012 142300    31581       6.3 2010 
+ 2 Houston  2010     2  3684  731357757 146500    32695       6.6 2010.
+ 3 Houston  2010     3  5389 1116539769 152300    34880       6.9 2010.
+ 4 Houston  2010     4  5932 1191105918 151800    34555       6.7 2010.
+ 5 Houston  2010     5  6335 1289709166 152500    36724       7   2010.
+ 6 Houston  2010     6  6117 1324315238 156800    39303       7.5 2010.
+ 7 Houston  2010     7  4719 1028687548 157100    40409       7.9 2010.
+ 8 Houston  2010     8  4691  994092936 156900    40154       8   2011.
+ 9 Houston  2010     9  4355  915074585 153200    39159       7.9 2011.
+10 Houston  2010    10  4075  824541611 148400    38114       7.9 2011.
+11 Houston  2010    11  3924  842238262 150100    37031       7.8 2011.
+12 Houston  2010    12  4730 1028424811 157500    34971       7.4 2011.</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 5) Build on what you've done above. Filter for only where the city is Houston as above, </span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="co"># and the year is 2010. Now add a sort using arrange() to sort the results based on the number</span></span>
+<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a><span class="co"># of home sales (the "sales" column) from most to least.</span></span>
+<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>houston<span class="ot">=</span><span class="fu">filter</span>(housesales, city <span class="sc">==</span> <span class="st">"Houston"</span>, year <span class="sc">==</span> <span class="dv">2010</span>)</span>
+<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(houston, <span class="fu">desc</span>(sales))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 9
+   city     year month sales     volume median listings inventory  date
+   &lt;chr&gt;   &lt;int&gt; &lt;int&gt; &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+ 1 Houston  2010     5  6335 1289709166 152500    36724       7   2010.
+ 2 Houston  2010     6  6117 1324315238 156800    39303       7.5 2010.
+ 3 Houston  2010     4  5932 1191105918 151800    34555       6.7 2010.
+ 4 Houston  2010     3  5389 1116539769 152300    34880       6.9 2010.
+ 5 Houston  2010    12  4730 1028424811 157500    34971       7.4 2011.
+ 6 Houston  2010     7  4719 1028687548 157100    40409       7.9 2010.
+ 7 Houston  2010     8  4691  994092936 156900    40154       8   2011.
+ 8 Houston  2010     9  4355  915074585 153200    39159       7.9 2011.
+ 9 Houston  2010    10  4075  824541611 148400    38114       7.9 2011.
+10 Houston  2010    11  3924  842238262 150100    37031       7.8 2011.
+11 Houston  2010     2  3684  731357757 146500    32695       6.6 2010.
+12 Houston  2010     1  2856  544338012 142300    31581       6.3 2010 </code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 6) Piggyback on what you've done above. </span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="co"># Do the same as #5, only this time instead of Houston return records for Dallas</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a>dallas<span class="ot">=</span><span class="fu">filter</span>(housesales, city <span class="sc">==</span> <span class="st">"Dallas"</span>, year <span class="sc">==</span> <span class="dv">2010</span>)</span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(dallas, <span class="fu">desc</span>(sales))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 12 × 9
+   city    year month sales     volume median listings inventory  date
+   &lt;chr&gt;  &lt;int&gt; &lt;int&gt; &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+ 1 Dallas  2010     5  4891 1025677623 161900    25680       6.4 2010.
+ 2 Dallas  2010     4  4791 1005356810 160100    24290       6.2 2010.
+ 3 Dallas  2010     6  4658 1055526309 166700    26812       6.7 2010.
+ 4 Dallas  2010     3  4082  824662535 156800    24125       6.3 2010.
+ 5 Dallas  2010     8  3476  738748272 164900    27346       7.2 2011.
+ 6 Dallas  2010     7  3363  782294206 167800    27709       7.2 2010.
+ 7 Dallas  2010    12  3215  743761990 161900    22557       6.4 2011.
+ 8 Dallas  2010     9  3151  651529718 155200    26745       7.2 2011.
+ 9 Dallas  2010    10  2977  606133350 154100    25688       7.1 2011.
+10 Dallas  2010    11  2795  608685059 154900    24254       6.8 2011.
+11 Dallas  2010     2  2774  548903564 149800    22991       6.1 2010.
+12 Dallas  2010     1  2210  420140118 140800    21825       5.7 2010 </code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 7) Sometimes metrics like home sales have a seasonal quality to them, much like </span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="co"># retail sales. There are times of year that are naturally more active, and others where</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a><span class="co"># it's slower.</span></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># That means sometimes you'll want to isolate the same time period across multiple years</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a><span class="co"># to compare how it went based on similar times of year.</span></span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a><span class="co"># Let's do that here: we're going to look only for sales that happened in the month of JUNE.</span></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co">#</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a><span class="co"># Filter for the city is Dallas, and the month is June (the number 6). </span></span>
+<span id="cb20-9"><a href="#cb20-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-10"><a href="#cb20-10" aria-hidden="true" tabindex="-1"></a>DJ<span class="ot">=</span><span class="fu">filter</span>(housesales, city <span class="sc">==</span> <span class="st">"Dallas"</span>, month <span class="sc">==</span> <span class="dv">6</span>)</span>
+<span id="cb20-11"><a href="#cb20-11" aria-hidden="true" tabindex="-1"></a><span class="fu">filter</span>(housesales, city <span class="sc">==</span> <span class="st">"Dallas"</span>, month <span class="sc">==</span> <span class="dv">6</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 16 × 9
+   city    year month sales     volume median listings inventory  date
+   &lt;chr&gt;  &lt;int&gt; &lt;int&gt; &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+ 1 Dallas  2000     6  4738  846254912 138800    14392       3.8 2000.
+ 2 Dallas  2001     6  5065  941310414 146300    18372       4.8 2001.
+ 3 Dallas  2002     6  4423  817899695 148400    22043       5.6 2002.
+ 4 Dallas  2003     6  4847  920352540 154000    27169       6.9 2003.
+ 5 Dallas  2004     6  5511 1134082858 159300    28725       6.6 2004.
+ 6 Dallas  2005     6  6416 1352136392 158900    28875       6.1 2005.
+ 7 Dallas  2006     6  7117 1546598624 163400    30323       5.8 2006.
+ 8 Dallas  2007     6  6207 1432055051 169100    33624       6.4 2007.
+ 9 Dallas  2008     6  5180 1134394581 164400    30340       6.6 2008.
+10 Dallas  2009     6  4691 1001824336 166600    24677       6.5 2009.
+11 Dallas  2010     6  4658 1055526309 166700    26812       6.7 2010.
+12 Dallas  2011     6  4541 1009183879 165700    23968       7.2 2011.
+13 Dallas  2012     6  5196 1209024869 177900    17587       4.6 2012.
+14 Dallas  2013     6  5981 1593190134 202800    13339       2.9 2013.
+15 Dallas  2014     6  6309 1703805588 217100    12432       2.5 2014.
+16 Dallas  2015     6  6532 1960556658 242300    11014       2.2 2015.</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># 8) Build on what we've done above. Now that we have June numbers for Dallas for every year,</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a><span class="co"># arrange the results by sales from highest-to-lowest to show what year had the highest June sales.</span></span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="fu">arrange</span>(DJ, <span class="fu">desc</span>(sales))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># A tibble: 16 × 9
+   city    year month sales     volume median listings inventory  date
+   &lt;chr&gt;  &lt;int&gt; &lt;int&gt; &lt;dbl&gt;      &lt;dbl&gt;  &lt;dbl&gt;    &lt;dbl&gt;     &lt;dbl&gt; &lt;dbl&gt;
+ 1 Dallas  2006     6  7117 1546598624 163400    30323       5.8 2006.
+ 2 Dallas  2015     6  6532 1960556658 242300    11014       2.2 2015.
+ 3 Dallas  2005     6  6416 1352136392 158900    28875       6.1 2005.
+ 4 Dallas  2014     6  6309 1703805588 217100    12432       2.5 2014.
+ 5 Dallas  2007     6  6207 1432055051 169100    33624       6.4 2007.
+ 6 Dallas  2013     6  5981 1593190134 202800    13339       2.9 2013.
+ 7 Dallas  2004     6  5511 1134082858 159300    28725       6.6 2004.
+ 8 Dallas  2012     6  5196 1209024869 177900    17587       4.6 2012.
+ 9 Dallas  2008     6  5180 1134394581 164400    30340       6.6 2008.
+10 Dallas  2001     6  5065  941310414 146300    18372       4.8 2001.
+11 Dallas  2003     6  4847  920352540 154000    27169       6.9 2003.
+12 Dallas  2000     6  4738  846254912 138800    14392       3.8 2000.
+13 Dallas  2009     6  4691 1001824336 166600    24677       6.5 2009.
+14 Dallas  2010     6  4658 1055526309 166700    26812       6.7 2010.
+15 Dallas  2011     6  4541 1009183879 165700    23968       7.2 2011.
+16 Dallas  2002     6  4423  817899695 148400    22043       5.6 2002.</code></pre>
+</div>
+</div>
+<section id="now-do-the-same-as-question-8-but-this-time-instead-of-dallas-show-results-for-corpus-christi" class="level1">
+<h1>9) Now do the same as Question 8, but this time instead of Dallas, show results for Corpus Christi</h1>
+<p>CC=filter(housesales, city == “Corpus Christi”, month == 6) filter(housesales, city == “Corpus Christi”, month == 6) arrange(CC, desc(sales))</p>
+</section>
+<section id="finally-using-the-corpus-christi-code-from-question-9-instead-of-june" class="level1">
+<h1>10) Finally, using the Corpus Christi code from Question 9, instead of June</h1>
+</section>
+<section id="use-the-month-of-february-2-instead." class="level1">
+<h1>use the month of February (2) instead.</h1>
+<p>CC=filter(housesales, city == “Corpus Christi”, month == 2) filter(housesales, city == “Corpus Christi”, month == 2) arrange(CC, desc(sales))</p>
+<hr>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
