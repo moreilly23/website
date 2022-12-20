@@ -6,20 +6,18 @@ website:
   page-footer:
     left: ""
     right:
-      - icon: github
-        href: https://github.com/moreilly23
-
+    - icon: github
+      href: https://github.com
   title: "Miles O'Reilly"
   navbar:
-    left:
+   left:
       - text: "Home"
-      - file: index.qmd
+        file: index.qmd
       - portfolio.qmd
-      - VA Analysis.qmd
       - walkie.qmd
+      - VA Analysis.qmd
       - text: Resume
-      - href: https://docs.google.com/document/d/1ndvGhaL2B1C4ve2Np-jA_cEQ4p_WGg4McJgkXW6RI2Y/edit?usp=sharing
-    right:
+        href: https://github.com/moreilly23/website/blob/master/MILES%20O'REILLY%20RESUME%20(3).pdf
       - icon: linkedin
         href: www.linkedin.com/in/milesoreilly
 
