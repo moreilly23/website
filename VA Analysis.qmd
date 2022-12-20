@@ -45,7 +45,7 @@ DT::datatable(Top5county)
 
 #Finally, after focusing in on the specific data points we want, I will use ggplot's charting function to visualize Youngkin's best performances in a bar chart. This chart was created through the use of 'reorder()', in which I graphed his margin in respect to localities. 
 
-ggplot(Top5county, aes(x=reorder(locality, YoungkinMarg), y=YoungkinMarg)) + geom_bar(stat = "identity", color = "black", fill = "blue") + coord_flip() +
+ggplot(Top5county, aes(x=reorder(locality, YoungkinMarg), y=YoungkinMarg)) + geom_bar(stat = "identity", color = "black", fill = "red") + coord_flip() +
   labs(title="Youngkin's Top Five Counties vs. Trump", x="County", y="Margin Percentage")
   
 
