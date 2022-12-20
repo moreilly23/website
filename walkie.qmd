@@ -2,6 +2,8 @@
 title: "Walkthrough"
 editor: visual
 ---
+Housing Sale Analysis
+---
 ```{r}
 #As always, we start off by librarying the packages we will use in our code. For this data set we will use tidyverse and lubridate. 
 library(tidyverse)

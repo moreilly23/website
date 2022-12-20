@@ -2,8 +2,8 @@
 title: "VA Analysis"
 editor: visual
 ---
-
-title: "Virginia Election Project" author: "Miles O'Reilly" execute: echo: true format: html: self-contained: true code-tools: true ---
+Virginia Election Analysis
+---
 
 ```{r setup, include=FALSE, warning=FALSE, message=FALSE}
 #This will be a walkthrough of my analysis of both Virginia's 2020 presidential election and 2021 gubernatorial election data. We will start of by librarying the packages we will use.
